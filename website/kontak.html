@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Buku tamu Dunia Fisika: tinggalkan pesan dan saran Anda.">
+  <title>Kontak | Dunia Fisika</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site">
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+    <h1>Buku Tamu</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Isi Buku Tamu</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Data Pengunjung</legend>
+
+          <label for="nama">Nama:
+            <input type="text" id="nama" name="nama" required placeholder="Nama lengkap">
+          </label>
+          <label for="email">Email:
+            <input type="email" id="email" name="email" required>
+          </label>
+          <label for="tgl">Tanggal kunjungan:
+            <input type="date" id="tgl" name="tgl">
+          </label>
+          <label for="umur">Umur:
+            <input type="number" id="umur" name="umur" min="1" max="120">
+          </label>
+          <label for="pass">Kata sandi:
+            <input type="password" id="pass" name="pass">
+          </label>
+
+          <p>Jenis kelamin:</p>
+          <label><input type="radio" name="jk" value="L"> Laki-laki</label>
+          <label><input type="radio" name="jk" value="P"> Perempuan</label>
+
+          <label for="topik">Topik favorit:
+            <select id="topik" name="topik">
+              <optgroup label="Mekanika">
+                <option value="gerak">Gerak</option>
+                <option value="gaya">Gaya</option>
+              </optgroup>
+              <optgroup label="Lainnya">
+                <option value="listrik">Listrik</option>
+                <option value="optik">Optik</option>
+              </optgroup>
+            </select>
+          </label>
+
+          <label for="kota">Asal kota:
+            <input list="daftar-kota" id="kota" name="kota">
+            <datalist id="daftar-kota">
+              <option value="Semarang"><option value="Jakarta"><option value="Surabaya">
+            </datalist>
+          </label>
+
+          <label for="rating">Penilaian website:
+            <input type="range" id="rating" name="rating" min="1" max="5">
+          </label>
+
+          <p>Minat:</p>
+          <label><input type="checkbox" name="minat" value="web"> Web</label>
+          <label><input type="checkbox" name="minat" value="sains"> Sains</label>
+          <br>
+          <label for="pesan">Pesan : </label>
+            <br> 
+            <textarea id="pesan" name="pesan" rows="5" cols="40" required></textarea>
+
+          <p>
+            <button type="submit">Kirim</button>
+            <button type="reset">Reset</button>
+            <input type="hidden" name="halaman" value="kontak">
+          </p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

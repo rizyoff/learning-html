@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Table</title>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>
+                form pendaftaran
+            </legend>
+            <label for="NIM">NIM : </label>
+            <input type="text" name="NIM" id="NIM" required autofocus placeholder="masukkan nim lengkap">
+            <br>
+
+            <label for="nilai_tugas">Nilai_Tugas : </label>
+            <input type="number" name="nilai_tugas" id="nilai_tugas" placeholder="isi nilai tugas mas" required autofocus>
+            <br>
+
+            <label for="nilai_UTS">Nilai UTS : </label>
+            <input type="number" name="nilai_UTS" id="nilai_UTS" placeholder="isi niali uts mas" required autofocus>
+            <br>
+
+            <label for="nilai_UAS">Nilai UAS : </label>
+            <input type="number" name="nilai_UAS" id="nilai_UAS" placeholder="isi nilai uas mas" required autofocus>
+            <br>
+
+            <button type="submit">Submit</button>
+
+        </fieldset>
+    </form>
+    <table border="1" cellpadding="20" width="100%">
+
+        <caption>Table Nilai</caption>
+        <thead>
+            <tr>
+            <th rowspan="2">NO</th>
+            <th rowspan="2">NIM</th>
+            <th rowspan="2">NAMA</th>
+            <th colspan="3">NILAI</th>
+            </tr>
+            <tr>
+                <th>Tugas</th>
+                <th>UTS</th>
+                <th>UAS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <th>A11.2025.12345</th>
+                <td>Yanto</td>
+                <td>90</td>
+                <td>78</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <th>A11.2025.87676</th>
+                <td>Yunti</td>
+                <td>80</td>
+                <td>08</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <th>A11.2023.12345</th>
+                <td>Yanti</td>
+                <td>80</td>
+                <td>58</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <th>A12.2023.12345</th>
+                <td>gilong</td>
+                <td>30</td>
+                <td>70</td>
+                <td>98</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="6">Total : 4 Data</td>
+        </tfoot>
+    </table>
+</body>
+</html>

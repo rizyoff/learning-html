@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website belajar fisika dasar: gelombang, gerak, dan listrik.">
+  <meta name="keywords" content="fisika, gelombang, bandul, HTML">
+  <meta name="author" content="Nama Mahasiswa">
+  <title>Belajar Fisika yukss men</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site">
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+    <h1>Ini semua tentang Fisika</h1>
+    <p><small>Belajar fisika dasar dengan <abbr title="HyperText Markup Language">HTML</abbr></small></p>
+  </header>
+
+  <main>
+    <section id="identitas">
+      <h2>Identitas Mahasiswa</h2>
+      <table border="2" cellpadding="20">
+        <caption>Data Diri</caption>
+        <thead>
+          <tr>
+            <th colspan="2">Biodata</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nama</td>
+            <td>Muhammad Rizky</td>
+          </tr>
+          <tr>
+            <td>NIM</td>
+            <td>A11.2025.16271</td>
+          </tr>
+          <tr>
+            <td>Program Studi</td>
+            <td rowspan="2">Teknik Informatika</td>
+          </tr>
+          <tr>
+            <td>Universitas Dian Nuswantoro</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Email: <a href="mailto:nama@mhs.dinus.ac.id">nama@mhs.dinus.ac.id
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <hr>
+
+    <section id="artikel">
+      <h2>Artikel</h2>
+
+      <article>
+        <header>
+          <h3>Biografi: Isaac Newton</h3>
+          <p><time datetime="2026-09-30">30 September 2026</time></p>
+        </header>
+        <p>Isaac Newton adalah <strong>fisikawan</strong> yang merumuskan tiga hukum gerak. Ia lahir tahun 1643.</p>
+        <p>Salah satu hukumnya: <q>Setiap aksi memiliki reaksi yang sama besar dan berlawanan arah.</q></p>
+        <blockquote cite="https://id.wikipedia.org/wiki/Isaac_Newton">
+          Hukum II Newton menyatakan bahwa percepatan sebanding dengan gaya total.
+        </blockquote>
+        <p>Rumusnya: <var>F</var> = <var>m</var> &times; <var>a</var>. Satuan gaya adalah newton (N), sama dengan
+          kg&middot;m/s<sup>2</sup>.</p>
+        <ul>
+          <li>Hukum I: Kelembaman</li>
+          <li>Hukum II: <code>F = m.a</code></li>
+          <li>Hukum III: Aksi&ndash;Reaksi
+            <ul>
+              <li>Contoh: roket meluncur</li>
+              <li>Contoh: berjalan</li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+
+      <article>
+        <header>
+          <h3>Berita: Fisika di Sekitar Kita</h3>
+        </header>
+        <p>Air: H<sub>2</sub>O. Percepatan gravitasi <b>9,8 m/s<sup>2</sup></b>. <del>Bumi datar</del> <ins>Bumi hampir
+            bulat</ins>.</p>
+        <p><mark>Catatan penting:</mark> <i>energi tidak dapat dimusnahkan</i>, hanya berubah bentuk. <u>Garis bawah</u>
+          dipakai untuk penekanan.</p>
+        <pre>
+          v = v0 + a.t
+          s = v0.t + 1/2 a.t^2
+        </pre>
+        <p>Baris pertama<br>Baris kedua setelah tag br.</p>
+      </article>
+
+      <article>
+        <header>
+          <h3>Tutorial: Menghitung Periode Bandul</h3>
+        </header>
+        <ol>
+          <li>Ukur panjang tali (<var>L</var>).</li>
+          <li>Simpangkan bandul dengan sudut kecil.</li>
+          <li>Catat waktu 10 ayunan.</li>
+          <li>Hitung periode <code>T = 2&pi; &radic;(L/g)</code>.</li>
+        </ol>
+        <br>
+        <p>Periode Waktu untuk satu getaran penuh.</p>
+        <p>Frekuensi Jumlah getaran per detik</p>
+        <p>Baca juga: <a href="gallery.html">galeri gambar</a> atau <a href="https://id.wikipedia.org/wiki/Fisika"
+            target="_blank" rel="noopener">Wikipedia Fisika</a>.</p>
+        <figure>
+          <img src="images/bandul.svg" alt="Ilustrasi bandul sederhana" width="300" height="200">
+          <figcaption>Gambar 1. Bandul sederhana</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <aside>
+      <h2>Video Singkat</h2>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video contoh" width="320" height="180"
+        allowfullscreen>
+    </iframe>
+    </aside>
+  </main>
+</body>
+
+</html>
