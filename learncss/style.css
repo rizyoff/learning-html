@@ -1,3 +1,14 @@
+/* Reset sederhana */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 16px;
+    font-family: sans-serif;
+}
+
 h1 {
     color: red;
     font-size: 20px;
@@ -12,49 +23,55 @@ p {
     text-align: left;
 }
 
-.container-wrapper{
+.container-wrapper {
     width: 100%;
-        
-    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 
-.container1 {
+.container1,
+.container2,
+.container3 {
     color: green;
     background-color: yellow;
     font-size: 14px;
     font-weight: normal;
-    display: inline-block;
     width: 30%;
-    height: 100px;
+    min-height: 100px;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid black;
-    margin: 10px;
 }
-.container2{
+
+.container2 {
     color: rgb(128, 0, 105);
-    background-color: yellow;
-    font-size: 14px;
-    font-weight: normal;
-    display: inline-block;
-    width: 30%;
-    height: 100px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid black;
-    margin: 10px;
 }
+
 .container3 {
     color: rgb(188, 62, 62);
-    background-color: yellow;
-    font-size: 14px;
-    font-weight: normal;
-    display: inline-block;
-    width: 30%;
-    height: 100px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid black;
-    margin: 10px;
 }
-    
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .container1,
+    .container2,
+    .container3 {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
