@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 4</title>
+    <style>
+        body {
+            margin: 10px;
+            font-family: sans-serif;
+        }
+
+        article {
+            background: rgb(228, 241, 250);
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            width: 100%;
+            
+        }
+
+        .contoh-4 {
+            display: flex;
+            flex-direction: column;
+           
+        }
+
+        @media (min-width: 768px) {
+            .contoh-4 {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+               
+            }
+
+            .contoh-4 article {
+                width: 24%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="contoh-4">
+        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, veniam ut quas tempora dicta sit.</article>
+        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat error sed eligendi cumque harum deserunt?</article>
+        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nostrum, officiis voluptatem est laboriosam iusto.</article>
+        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, veniam ut quas tempora dicta sit.</article>
+        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat error sed eligendi cumque harum deserunt?</article>
+        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nostrum, officiis voluptatem est laboriosam iusto.</article>
+    </section>
+
+</body>
+</html>

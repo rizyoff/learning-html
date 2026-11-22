@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Latihan HTML & JS</title>
+
+  <style>
+      h1{
+      color : yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="teks">Halo Pemula</h1>
+  <button id="tombol">Ubah Teks</button>
+
+  <script>
+    const tombol = document.getElementById("tombol");
+    const teks = document.getElementById("teks");
+
+    tombol.addEventListener("click", function () {
+      teks.textContent = "Teks berhasil diubah dengan JavaScript!";
+      teks.style.color = "crimson";
+      alert("asu");
+    });
+
+    const waktu = new Date();
+    console.log(waktu);
+  </script>
+</body>
+</html>

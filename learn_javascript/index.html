@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="id" data-bs-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Daily Journal</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #tombolKeAtas {
+            width: 52px;
+            height: 52px;
+            transition: opacity .25s ease, transform .25s ease;
+        }
+
+        #tombolKeAtas:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- BAGIAN NAVIGASI (NAVBAR) MULAI -->
+    <nav class="navbar navbar-expand-md bg-body-tertiary border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">My Daily Journal</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavigasi"
+                aria-controls="menuNavigasi" aria-expanded="false" aria-label="Buka menu navigasi">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuNavigasi">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#article">Article</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <!-- MENU BARU: Schedule & Profile -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#schedule">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer">Footer</a>
+                    </li>
+                    <!-- TOMBOL GANTI MODE TERANG / GELAP -->
+                    <li class="nav-item ms-md-2 mt-2 mt-md-0">
+                        <button id="tombolTema" type="button" class="btn btn-outline-danger w-100"
+                            aria-label="Ubah ke mode gelap">
+                            <i id="ikonTema" class="bi bi-moon-stars-fill"></i>
+                            <span class="d-md-none ms-1">Ganti Mode</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- BAGIAN NAVIGASI (NAVBAR) SELESAI -->
+
+    <!--  BAGIAN HERO MULAI  -->
+    <section id="home" class="text-center p-5 bg-primary-subtle">
+        <div class="container">
+            <div class="row align-items-center g-4 flex-column-reverse flex-md-row">
+                <div class="col-12 col-md-6 text-md-start">
+                    <h1 class="fw-bold">Catatan HarianKu</h1>
+                    <p class="lead mx-auto mx-md-0">
+                        Tempat saya menulis apa yang saya pelajari diudinus lurr, dikerjakan, dan 
+                        mulai dari kuliah, proyek, 
+                    </p>
+                    <a href="#article" class="btn btn-danger">Baca Jurnal</a>
+                    <a href="#gallery" class="btn btn-outline-danger">Lihat Dokumentasi</a>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <img src="https://picsum.photos/seed/dailyjournal/800/600" class="img-fluid rounded shadow"
+                        alt="Ilustrasi meja belajar dan buku catatan" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BAGIAN HERO SELESAI  -->
+
+    <!--  BAGIAN ARTICLE  MULAI -->
+    <section id="article" class="text-center p-5 mt-5">
+        <div class="container">
+            <h2 class="mb-4">Jurnal Harian</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/seed/jurnal1/1000/500" class="card-img-top" alt="Belajar Bootstrap">
+                        <div class="card-body">
+                            <h5 class="card-title">Mulai Belajar Bootstrap</h5>
+                            <p class="card-text">Hari ini saya mencoba grid system. Ternyata cukup menulis row dan col
+                                saja, tata letak halaman sudah bisa responsif.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Ditulis 2 hari lalu</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/seed/jurnal2/1000/500" class="card-img-top" alt="Kuliah Basis Data">
+                        <div class="card-body">
+                            <h5 class="card-title">Kuliah Basis Data</h5>
+                            <p class="card-text">Belajar membuat tabel dan menulis query SQL pertama. Awalnya bingung
+                                dengan JOIN, tapi mulai paham setelah latihan.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Ditulis 3 hari lalu</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/seed/jurnal3/1000/500" class="card-img-top" alt="Kerja kelompok">
+                        <div class="card-body">
+                            <h5 class="card-title">Kerja Kelompok</h5>
+                            <p class="card-text">Rapat bersama tim untuk membagi tugas proyek. Belajar bahwa komunikasi
+                                yang jelas sama pentingnya dengan kode yang rapi.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Ditulis 5 hari lalu</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/seed/jurnal4/1000/500" class="card-img-top" alt="Olahraga pagi">
+                        <div class="card-body">
+                            <h5 class="card-title">Olahraga Pagi</h5>
+                            <p class="card-text">Jogging 30 menit sebelum kuliah. Badan terasa lebih segar dan fokus di
+                                kelas jadi jauh lebih baik.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Ditulis 1 minggu lalu</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/seed/jurnal5/1000/500" class="card-img-top" alt="Refleksi mingguan">
+                        <div class="card-body">
+                            <h5 class="card-title">Refleksi Mingguan</h5>
+                            <p class="card-text">Menengok kembali target minggu ini. Sebagian selesai, sebagian perlu
+                                dilanjutkan. Tidak apa-apa, yang penting terus jalan.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Ditulis 2 minggu lalu</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BAGIAN ARTICLE SELESAI  -->
+
+    <!--  BAGIAN GALLERY (FOTO FOTO) MULAI  -->
+    <section id="gallery" class="text-center p-5 bg-primary-subtle">
+        <div class="container">
+            <h2 class="mb-4">Dokumentasi Kegiatan</h2>
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://picsum.photos/seed/dok1/1000/500" class="d-block w-100 rounded" alt="Dokumentasi kegiatan 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/seed/dok2/1000/500" class="d-block w-100 rounded" alt="Dokumentasi kegiatan 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/seed/dok3/1000/500" class="d-block w-100 rounded" alt="Dokumentasi kegiatan 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!--  BAGIAN GALLERY SELESAI  -->
+
+    <!--  BAGIAN SCHEDULE MULAI  -->
+    <section id="schedule" class="p-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Jadwal Kuliah &amp; Kegiatan Mahasiswa</h2>
+
+            <div class="row row-cols-1 row-cols-md-4 g-3 justify-content-center">
+
+                <!-- SENIN -->
+                <div class="col">
+                    <div class="card card-jadwal h-100 border-primary text-center">
+                        <div class="card-header bg-primary text-white fw-bold">Senin</div>
+                        <div class="card-body small">
+                            <p class="mb-3"><strong>09:00 - 10:30</strong><br>Basis Data<br><span class="text-secondary">Ruang H.3.4</span></p>
+                            <p class="mb-0"><strong>13:00 - 15:00</strong><br>Dasar Pemrograman<br><span class="text-secondary">Ruang H.3.1</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SELASA -->
+                <div class="col">
+                    <div class="card card-jadwal h-100 border-success text-center">
+                        <div class="card-header bg-success text-white fw-bold">Selasa</div>
+                        <div class="card-body small">
+                            <p class="mb-3"><strong>08:00 - 09:30</strong><br>Pemrograman Berbasis Web<br><span class="text-secondary">Ruang D.2.J</span></p>
+                            <p class="mb-0"><strong>14:00 - 16:00</strong><br>Basis Data<br><span class="text-secondary">Ruang D.3.M</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RABU -->
+                <div class="col">
+                    <div class="card card-jadwal h-100 border-danger text-center">
+                        <div class="card-header bg-danger text-white fw-bold">Rabu</div>
+                        <div class="card-body small">
+                            <p class="mb-3"><strong>10:00 - 12:00</strong><br>Pemrograman Berbasis Object<br><span class="text-secondary">Ruang D.2.A</span></p>
+                            <p class="mb-0"><strong>13:30 - 15:00</strong><br>Pemrograman Sisi Server<br><span class="text-secondary">Ruang D.2.A</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KAMIS -->
+                <div class="col">
+                    <div class="card card-jadwal h-100 border-warning text-center">
+                        <div class="card-header bg-warning fw-bold">Kamis</div>
+                        <div class="card-body small">
+                            <p class="mb-3"><strong>08:00 - 10:00</strong><br>Pengantar Teknologi Informasi<br><span class="text-secondary">Ruang D.3.N</span></p>
+                            <p class="mb-0"><strong>11:00 - 13:00</strong><br>Rapat Koordinasi DOSCOM<br><span class="text-secondary">Ruang Rapat G.1</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JUMAT -->
+                <div class="col">
+                    <div class="card card-jadwal h-100 border-info text-center">
+                        <div class="card-header bg-info fw-bold">Jumat</div>
+                        <div class="card-body small">
+                            <p class="mb-3"><strong>09:00 - 11:00</strong><br>Data Mining<br><span class="text-secondary">Ruang D.2.3</span></p>
+                            <p class="mb-0"><strong>13:00 - 15:00</strong><br>Information Retrieval<br><span class="text-secondary">Ruang D.2.4</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SABTU -->
+                <div class="col">
+                    <div class="card card-jadwal h-100 border-secondary text-center">
+                        <div class="card-header bg-secondary text-white fw-bold">Sabtu</div>
+                        <div class="card-body small">
+                            <p class="mb-3"><strong>08:00 - 10:00</strong><br>Bimbingan Karier<br><span class="text-secondary">Online</span></p>
+                            <p class="mb-0"><strong>10:30 - 12:00</strong><br>Bimbingan Skripsi<br><span class="text-secondary">Online</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MINGGU -->
+                <div class="col">
+                    <div class="card card-jadwal h-100 border-dark text-center">
+                        <div class="card-header bg-dark text-white fw-bold">Minggu</div>
+                        <div class="card-body small d-flex align-items-center justify-content-center">
+                            <p class="mb-0 text-secondary">Tidak Ada Jadwal</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--  BAGIAN SCHEDULE SELESAI  -->
+
+    <!--  BAGIAN PROFILE MULAI  -->
+    <section id="profile" class="p-5 bg-primary-subtle">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Profil Mahasiswa</h2>
+
+            <div class="row align-items-center justify-content-center g-4">
+                <!-- Foto (kiri) -->
+                <div class="col-12 col-md-4 text-center">
+                    <!-- Ganti src dengan foto Anda, misal: img/foto.jpg -->
+                    <img src="Formal University ID Portrait (1).jpg"
+                        alt="Foto profil" width="300" height="300" class="rounded-circle foto-profil shadow border border-secondary border-5">
+                </div>
+
+                <!-- Data diri (kanan) -->
+                <div class="p-5 col-md-7 col-lg-6">
+                    <!-- text-center di mobile, text-md-start mulai 768px ke atas -->
+                
+                    <h4 class="mb-3 text-center text-md-start">Muhammad Rizky</h4>
+                    <table class="table table-borderless table-sm mb-0 bg-transparent w-100">
+                        <tbody class="p-3">
+                            <tr><th class="p-2" scope="row"">NIM</th><td>: A11.2025.16271</td></tr>
+                            <tr><th class="p-2" scope="row">Program Studi</th><td>: Teknik Informatika</td></tr>
+                            <tr><th class="p-2" scope="row">Email</th><td>: 111202516271l@mhs.dinus.ac.id</td></tr>
+                            <tr><th class="p-2" scope="row">Telepon</th><td>: +62 858 7707 3296</td></tr>
+                            <tr><th class="p-2" scope="row">Alamat</th><td>: Semarang</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  BAGIAN PROFILE SELESAI  -->
+
+    <!--  BAGIAN FOOTER MULAI  -->
+    <footer id="footer" class="text-center p-5 bg-black text-light">
+        <div class="container">
+            <a href="https://github.com/rizyoff" target="_blank"><i class="bi bi-github h2 p-2 text-white"></i></a>
+            <a href="https://www.linkedin.com/in/muhammad-rizky-a84719428/" target="_blank"><i class="bi bi-linkedin h2 p-2 text-white"></i></a>
+            <a href="https://wa.me/6285877073296" target="_blank"><i class="bi bi-whatsapp h2 p-2 text-white"></i></a>
+            <p class="mb-1">Muhammad Rizky &copy; 2026 .</p>
+
+            <p class="mb-0 small">
+                <a href="#home" class="link-light text-decoration-none">Kembali ke atas</a>
+            </p>
+        </div>
+    </footer>
+    <!--  BAGIAN FOOTER SELESAI  -->
+
+    <!--  TOMBOL KEMBALI KE ATAS  -->
+    <button id="tombolKeAtas" type="button"
+        class="btn btn-danger btn-lg rounded-circle shadow position-fixed bottom-0 end-0 m-3 d-none"
+        style="z-index: 1050;" aria-label="Kembali ke atas">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script>
+        // ===== GANTI MODE TERANG / GELAP =====
+        const html = document.documentElement;
+        const tombolTema = document.getElementById('tombolTema');
+        const ikonTema = document.getElementById('ikonTema');
+
+        function terapkanTema(tema) {
+            html.setAttribute('data-bs-theme', tema);
+            localStorage.setItem('tema', tema);
+
+            if (tema === 'dark') {
+                ikonTema.className = 'bi bi-sun-fill';
+                tombolTema.setAttribute('aria-label', 'Ubah ke mode terang');
+            } else {
+                ikonTema.className = 'bi bi-moon-stars-fill';
+                tombolTema.setAttribute('aria-label', 'Ubah ke mode gelap');
+            }
+        }
+
+        // Pakai tema tersimpan, kalau belum ada ikut pengaturan sistem
+        const temaTersimpan = localStorage.getItem('tema');
+        if (temaTersimpan) {
+            terapkanTema(temaTersimpan);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            terapkanTema('dark');
+        } else {
+            terapkanTema('light');
+        }
+
+        tombolTema.addEventListener('click', () => {
+            const temaBaru = html.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
+            terapkanTema(temaBaru);
+        });
+
+        // ===== TOMBOL KEMBALI KE ATAS =====
+        const tombolKeAtas = document.getElementById('tombolKeAtas');
+
+        window.addEventListener('scroll', () => {
+            tombolKeAtas.classList.toggle('d-none', window.scrollY < 300);
+        }, { passive: true });
+
+        tombolKeAtas.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
